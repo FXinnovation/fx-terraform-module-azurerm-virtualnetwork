@@ -13,6 +13,11 @@ output "virtual_network_name" {
   value       = azurerm_virtual_network.this.name
 }
 
+output "virtual_network_resource_group_name" {
+  description = "Virtual network resource group name"
+  value       = azurerm_virtual_network.this.resource_group_name
+}
+
 output "virtual_network_address_space" {
   description = "Virtual network space"
   value       = azurerm_virtual_network.this.address_space
