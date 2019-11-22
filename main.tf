@@ -1,13 +1,13 @@
-data "azurerm_resource_group" "netrg" {
+data "azurerm_resource_group" "rg" {
   name = var.resource_group_name
 }
 
 locals {
-  location = var.location == "" ? data.azurerm_resource_group.netrg.location : var.location
+  location = var.location == "" ? data.azurerm_resource_group.rg.location : var.location
 }
 
 resource "azurerm_virtual_network" "this" {
-  resource_group_name = data.azurerm_resource_group.netrg.name
+  resource_group_name = data.azurerm_resource_group.rg.name
   location            = local.location
   name                = var.vnet_name
   address_space       = var.vnet_address_space
