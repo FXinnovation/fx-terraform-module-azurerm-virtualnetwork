@@ -2,7 +2,7 @@ data "azurerm_resource_group" "netrg" {
   name = var.resource_group_name
 }
 
-local {
+locals {
   location = var.vnet_location == "" ? data.azurerm_resource_group.netrg.location : var.vnet_location
 }
 
