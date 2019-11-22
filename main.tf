@@ -3,7 +3,7 @@ data "azurerm_resource_group" "netrg" {
 }
 
 locals {
-  location = var.vnet_location == "" ? data.azurerm_resource_group.netrg.location : var.vnet_location
+  location = var.location == "" ? data.azurerm_resource_group.netrg.location : var.location
 }
 
 resource "azurerm_virtual_network" "this" {

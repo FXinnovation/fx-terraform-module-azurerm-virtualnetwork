@@ -1,16 +1,16 @@
-variable "vnet_name" {
-  description = "Name of the virtual network."
+variable "resource_group_name" {
+  description = "Resource group where the vnet resides."
   type        = string
 }
 
-variable "vnet_location" {
+variable "location" {
   description = "Location of the virtual network."
   type        = string
   default     = ""
 }
 
-variable "resource_group_name" {
-  description = "Resource group where the vnet resides."
+variable "vnet_name" {
+  description = "Name of the virtual network."
   type        = string
 }
 
