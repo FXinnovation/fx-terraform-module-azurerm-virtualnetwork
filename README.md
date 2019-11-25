@@ -31,3 +31,11 @@ This virtual network supports custom address spaces, custom DNS servers and bein
 | virtual\_network\_resource\_group\_name | Virtual network resource group name |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Examples
+
+Usage example is found in the `./examples/default/` folder.
+
+## Inspec
+
+No Inspec tests are done for this module.
