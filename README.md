@@ -1,5 +1,11 @@
 # terraform-module-azurerm-virtualnetwork
 
+## Usage
+
+This module is used to deploy a single virtual network.
+
+This virtual network supports custom address spaces, custom DNS servers and being linked to a standard SKU DDoS protection plan (Note that you have a limit of one plan per region (Azure limitation)).
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
