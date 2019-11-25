@@ -38,4 +38,4 @@ Usage example is found in the `./examples/default/` folder.
 
 ## Inspec
 
-No Inspec tests are done for this module.
+No Inspec tests are done for this module
