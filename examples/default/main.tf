@@ -6,7 +6,7 @@ module "az-rg-demo" {
 }
 
 module "az-vnet-demo" {
-  source              = "git::ssh://git@scm.dazzlingwrench.fxinnovation.com:2222/fxinnovation-public/terraform-module-azurerm-virtualnetwork.git?ref=v0.1"
+  source              = "../../"
   resource_group_name = module.az-rg-demo.name
   vnet_name           = var.vnet_name
   vnet_address_space  = var.vnet_address_space
