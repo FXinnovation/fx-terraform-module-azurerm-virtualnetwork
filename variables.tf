@@ -26,8 +26,14 @@ variable "vnet_dns_servers" {
   default     = []
 }
 
+variable "network_ddos_protection_plan" {
+  description = "Object containing bool about enabling ddos plan and ID of the ddos plan."
+  type        = any
+  default     = []
+}
+
 variable "tags" {
   description = "Tags to add to the virtual network."
-  default     = {}
   type        = map
+  default     = {}
 }
