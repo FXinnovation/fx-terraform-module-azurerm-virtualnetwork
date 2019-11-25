@@ -147,25 +147,27 @@ variable "route_tables_config" {
   description = "Object containing deployment information for route tables."
   type        = any
   default = {
-    name                          = "rt1"
-    disable_bgp_route_propagation = false
-    routes = [
-      {
-        name           = "tmp"
-        address_prefix = "8.8.8.8/32"
-        next_hop_type  = "None"
-      },
-      {
-        name           = "tmp2"
-        address_prefix = "192.168.1.0/24"
-        next_hop_type  = "None"
-      },
-      {
-        name                   = "tmp3"
-        address_prefix         = "192.168.2.0/24"
-        next_hop_type          = "VirtualAppliance"
-        next_hop_in_ip_address = "10.0.1.4"
-      }
-    ]
+    rt1 = {
+      name                          = "rt1"
+      disable_bgp_route_propagation = false
+      routes = [
+        {
+          name           = "tmp"
+          address_prefix = "8.8.8.8/32"
+          next_hop_type  = "None"
+        },
+        {
+          name           = "tmp2"
+          address_prefix = "192.168.1.0/24"
+          next_hop_type  = "None"
+        },
+        {
+          name                   = "tmp3"
+          address_prefix         = "192.168.2.0/24"
+          next_hop_type          = "VirtualAppliance"
+          next_hop_in_ip_address = "10.0.1.4"
+        }
+      ]
+    }
   }
 }
