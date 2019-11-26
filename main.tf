@@ -1,10 +1,22 @@
+#####
+# Datasources
+#####
+
 data "azurerm_resource_group" "rg" {
   name = var.resource_group_name
 }
 
+#####
+# Locals
+#####
+
 locals {
   location = var.location == "" ? data.azurerm_resource_group.rg.location : var.location
 }
+
+#####
+# Resources
+#####
 
 resource "azurerm_virtual_network" "this" {
   resource_group_name = data.azurerm_resource_group.rg.name
