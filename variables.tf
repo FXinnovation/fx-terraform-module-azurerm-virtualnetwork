@@ -1,3 +1,8 @@
+variable "enabled" {
+  description = "Enable or disable module"
+  default     = true
+}
+
 variable "resource_group_name" {
   description = "Resource group where the vnet resides."
   type        = string

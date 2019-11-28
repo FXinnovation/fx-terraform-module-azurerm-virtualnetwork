@@ -11,6 +11,7 @@ This virtual network supports custom address spaces, custom DNS servers and bein
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
+| enabled | Enable or disable module | string | `"true"` | no |
 | location | Location of the virtual network. | string | `""` | no |
 | network\_ddos\_protection\_plan | Object containing bool about enabling ddos plan and ID of the ddos plan. | list | `[]` | no |
 | resource\_group\_name | Resource group where the vnet resides. | string | n/a | yes |
