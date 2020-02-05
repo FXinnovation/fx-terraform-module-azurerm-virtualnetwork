@@ -8,6 +8,7 @@ module "az_rg_demo" {
 module "az_vnet_demo" {
   source              = "../../"
   resource_group_name = module.az_rg_demo.name
+  location            = var.location
   vnet_name           = var.vnet_name
   vnet_address_space  = var.vnet_address_space
   vnet_dns_servers    = var.vnet_dns_servers

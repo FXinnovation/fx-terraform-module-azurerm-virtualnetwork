@@ -10,7 +10,7 @@ variable "resource_group_name" {
 
 variable "location" {
   description = "Location of the virtual network."
-  default     = ""
+  type        = string
 }
 
 variable "vnet_name" {
