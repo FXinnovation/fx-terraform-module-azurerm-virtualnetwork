@@ -7,18 +7,24 @@ This module is used to deploy a single virtual network.
 This virtual network supports custom address spaces, custom DNS servers and being linked to a standard SKU DDoS protection plan (Note that you have a limit of one plan per region (Azure limitation)).
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| azurerm | >= 1.36.0 |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| enabled | Enable or disable module | string | `"true"` | no |
-| location | Location of the virtual network. | string | n/a | yes |
-| network\_ddos\_protection\_plan | Object containing bool about enabling ddos plan and ID of the ddos plan. | list | `[]` | no |
-| resource\_group\_name | Resource group where the vnet resides. | string | n/a | yes |
-| tags | Tags to add to the virtual network. | map | `{}` | no |
-| vnet\_address\_space | The address space that is used by the virtual network | list | `[ "10.0.0.0/8" ]` | no |
-| vnet\_dns\_servers | List of IP addresses of DNS servers | list | `[]` | no |
-| vnet\_name | Name of the virtual network. | string | n/a | yes |
+|------|-------------|------|---------|:-----:|
+| enabled | Enable or disable module | `bool` | `true` | no |
+| location | Location of the virtual network. | `string` | n/a | yes |
+| network\_ddos\_protection\_plan | Object containing bool about enabling ddos plan and ID of the ddos plan. | `list` | `[]` | no |
+| resource\_group\_name | Resource group where the vnet resides. | `string` | n/a | yes |
+| tags | Tags to add to the virtual network. | `map` | `{}` | no |
+| vnet\_address\_space | The address space that is used by the virtual network | `list` | <pre>[<br>  "10.0.0.0/8"<br>]</pre> | no |
+| vnet\_dns\_servers | List of IP addresses of DNS servers | `list` | `[]` | no |
+| vnet\_name | Name of the virtual network. | `string` | n/a | yes |
 
 ## Outputs
 
