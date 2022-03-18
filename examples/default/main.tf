@@ -1,5 +1,5 @@
 module "az_rg_demo" {
-  source   = "git::ssh://git@scm.dazzlingwrench.fxinnovation.com:2222/fxinnovation-public/terraform-module-azurerm-resource-group.git?ref=0.2.0"
+  source   = "git::ssh://git@github.com/FXinnovation/fx-terraform-module-azurerm-resource-group.git?ref=0.2.0"
   location = var.location
   name     = var.resource_group_name
   tags     = var.tags
@@ -16,14 +16,14 @@ module "az_vnet_demo" {
 }
 
 module "az_subnets_demo" {
-  source               = "git::ssh://git@scm.dazzlingwrench.fxinnovation.com:2222/fxinnovation-public/terraform-module-azurerm-virtualnetwork-subnet.git?ref=0.2.1"
+  source               = "git::ssh://git@github.com/FXinnovation/fx-terraform-module-azurerm-virtualnetwork-subnet.git?ref=0.2.1"
   resource_group_name  = module.az_rg_demo.name
   virtual_network_name = module.az_vnet_demo.virtual_network_name
   subnets_config       = var.subnets_config
 }
 
 module "az_nsg_demo" {
-  source                         = "git::ssh://git@scm.dazzlingwrench.fxinnovation.com:2222/fxinnovation-public/terraform-module-azurerm-networksecuritygroup.git?ref=0.2.1"
+  source                         = "git::ssh://git@github.com/FXinnovation/fx-terraform-module-azurerm-networksecuritygroup.git?ref=0.2.1"
   resource_group_name            = module.az_rg_demo.name
   subnets_config                 = var.subnets_config
   network_security_groups_config = var.network_security_groups_config
@@ -32,7 +32,7 @@ module "az_nsg_demo" {
 }
 
 module "az_rt_demo" {
-  source              = "git::ssh://git@scm.dazzlingwrench.fxinnovation.com:2222/fxinnovation-public/terraform-module-azurerm-routetable.git?ref=0.2.1"
+  source              = "git::ssh://git@github.com/FXinnovation/fx-terraform-module-azurerm-routetable.git?ref=0.2.1"
   resource_group_name = module.az_rg_demo.name
   subnets_config      = var.subnets_config
   route_tables_config = var.route_tables_config
